@@ -438,11 +438,12 @@ function derr($msg, $object=null)
         }
     }
 
-    if( PH::$useExceptions )
-    {
+    // TODO: FIX THIS SHIT
+    // if( PH::$useExceptions )
+    // {
         $ex = new Exception($msg);
         throw $ex;
-    }
+    // }
 
     fwrite(STDERR,PH::boldText("\n* ** ERROR ** * ").$msg."\n\n");
 
